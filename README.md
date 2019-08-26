@@ -17,6 +17,7 @@ output: html_document
     head(clima)
     str(clima)
     month<-factor(month)
+    
 ## Gráficas tipo box Plot
     plot(month,upper)
     library(ggplot2)
@@ -25,16 +26,20 @@ output: html_document
     plot(month,upper)
     p1 <- ggplot(clima, aes(x = factor(month), y = upper))+geom_boxplot()
     p1
+    
 ## Instalando Plotly
     #install.packages("plotly")
     library(plotly)
+    
 ## Calculo de los cuantiles
     quantile(clima$upper) # para todos los años
+    
 ## Repetimos para lower
     pp <- ggplot(clima, aes(x = factor(month), y = lower)) + geom_boxplot()
     pp
     ggplotly(pp)
      quantile(clima$lower)  #Para todos los AÑOS
+     
 ## Análisis para todos los años del mes 3 en lower
     sub1<-subset(clima, month=="3")
     
@@ -68,6 +73,7 @@ output: html_document
     median(sub2$lower)
     
     summary(sub2$lower)
+    
 ## Grafica del Mes 3 de 1996
     par(mfrow=c(1,2))
     
