@@ -1,11 +1,11 @@
-   # Aprendiendo a analizar DataFrames
+# Aprendiendo a analizar DataFrames
 ----------
 
     title: "clima"
-    author: "Dr Victor"
+    Author: "Dr Victor"
     date: "19 de junio de 2019"
     output: html_document
-
+----------
 
 ## runtime: shiny
     knitr::opts_chunk$set(echo = TRUE)
@@ -87,5 +87,4 @@
     
     boxplot(sub2$lower)
     grid()
-
 
