@@ -1,16 +1,19 @@
-# Aprendiendo a analizar DataFrames
+   # Aprendiendo a analizar DataFrames
 ----------
 
-title: "clima"
-author: "Dr Victor"
-date: "19 de junio de 2019"
-output: html_document
+    title: "clima"
+    author: "Dr Victor"
+    date: "19 de junio de 2019"
+    output: html_document
+
 
 ## runtime: shiny
     knitr::opts_chunk$set(echo = TRUE)
+    
     # setwd("C:/Users/Dr.Victor/Dropbox/R code")
     getwd()
     clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.txt",header = T)
+    
     #library(ggplot2)
     names(clima)
     attach(clima)
@@ -38,7 +41,7 @@ output: html_document
     pp <- ggplot(clima, aes(x = factor(month), y = lower)) + geom_boxplot()
     pp
     ggplotly(pp)
-     quantile(clima$lower)  #Para todos los AÑOS
+    quantile(clima$lower)  #Para todos los AÑOS
      
 ## Análisis para todos los años del mes 3 en lower
     sub1<-subset(clima, month=="3")
