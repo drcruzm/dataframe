@@ -1,11 +1,15 @@
 # Análisis de Factores
 
+Analisis de Datos con Plottly y Factor
 
 ## Seleccion del directorio
-```{r setup, include=FALSE}
+
+``` {r setup, include=FALSE}
+
 knitr::opts_chunk$set(echo = TRUE)
 # setwd("C:/Users/Dr.Victor/Dropbox/R code")
 getwd()
+
 ```
 
 ## Lectura de Datos
