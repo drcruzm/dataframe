@@ -1,4 +1,4 @@
-### Seleccion del directorio
+## Seleccion del directorio
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -133,12 +133,12 @@ grid()
 quantile(clima$rain)
 ```
 ## Rain
-
 ```{r}
 p1 <- ggplot(clima, aes(x = factor(month), y = rain)) + geom_boxplot()
 ggplotly(p1)
 ```
 
+## Rain upper Limit
 ```{r}
 yr <-factor(yr)
 p3 <- ggplot(clima, aes(x = factor(yr), y = upper)) + geom_boxplot()
