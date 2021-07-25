@@ -1,18 +1,19 @@
-## Seleccion del directorio
+# Análisis de Factores
 
+
+## Seleccion del directorio
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # setwd("C:/Users/Dr.Victor/Dropbox/R code")
 getwd()
 ```
 
-### Lectura de Datos
-
+## Lectura de Datos
 ```{r}
 clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.txt",header = T)
 ```
 
-### library(ggplot2)
+## library(ggplot2)
 
 ```{r}
 library(ggplot2)
@@ -23,18 +24,17 @@ str(clima)
 month<-factor(month)
 ```
 
-### Gráficas tipo box Plot
+## Gráficas tipo box Plot
 ```{r}
 plot(month,upper)
 ```
 
-### Gráficas tipo FACTOR
+## Gráficas tipo FACTOR
 ```{r}
 month<-factor(month)
 is.factor(month)
 plot(month,upper)
 ```
-
 
 ## Gráfica Completa mes vs upper limit
 
