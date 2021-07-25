@@ -5,12 +5,14 @@
     output: ioslides_presentation
     runtime: shiny
     ---
-
+    
+    
     ```{r setup, include=FALSE}
     knitr::opts_chunk$set(echo = TRUE)
     # setwd("C:/Users/Dr.Victor/Dropbox/R code")
     getwd()
     ```
+
 
     ```{r}
     clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.txt",header = T)
@@ -27,6 +29,7 @@
 
     ```
 
+
     ## Gráficas tipo box Plot
     ```{r}
     plot(month,upper)
@@ -39,13 +42,17 @@
     is.factor(month)
     plot(month,upper)
     ```
+    
+    
     ## Gráfica Completa mes vs upper limit
+    
     ```{r}
     p1 <- ggplot(clima, aes(x = factor(month), y = upper))+geom_boxplot()
     p1
     ```
 
     ## Instalando Plotly
+    
     ```{r}
     #install.packages("plotly")
     library(plotly)
@@ -53,11 +60,13 @@
 
 
     ## Calculo de los cuantiles
+    
     ```{r}
     quantile(clima$upper) # para el año
     ```
 
     ## Repetimos para lower limit
+    
     ```{r}
     pp <- ggplot(clima, aes(x = factor(month), y = lower)) + geom_boxplot()
     pp
@@ -66,10 +75,12 @@
     ```
 
     ## Analisis para todos los años del mes 3 en lower
+    
     ```{r}
     sub1<-subset(clima, month=="3")
 
     ## AHORA EL FACTOR ES AÑO
+    
     mes3 <- ggplot(sub1, aes(x = factor(yr), y = lower)) + geom_boxplot()
 
     ggplotly(mes3)
@@ -85,6 +96,7 @@
     ```
 
     ## Graficando sus Frecuencias mes 3
+    
     ```{r}
     hist(sub1$lower,freq = T, col = "lightblue",main = "lower levels month 3")
     abline(v=mean(sub1$lower), col=3)
@@ -93,6 +105,7 @@
     ```
 
     ## Ahora solo para el mes 3 año 1996
+    
     ```{r}
     sub2 <- subset(sub1, yr==1996)
 
@@ -108,6 +121,7 @@
     ```
 
     ## Grafica del Mes 3 de 1996
+    
     ```{r}
     par(mfrow=c(1,2))
 
@@ -121,12 +135,13 @@
     grid()
     ```
 
-
     ## Quantile rain
+    
     ```{r}
     quantile(clima$rain)
     ```
     ## Rain
+    
     ```{r}
     p1 <- ggplot(clima, aes(x = factor(month), y = rain)) + geom_boxplot()
     ggplotly(p1)
