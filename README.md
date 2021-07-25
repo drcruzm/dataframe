@@ -4,12 +4,15 @@
 knitr::opts_chunk$set(echo = TRUE)
 # setwd("C:/Users/Dr.Victor/Dropbox/R code")
 getwd()
+
 ```
 
 ### Lectura de Datos
 
 ```{r}
+
 clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.txt",header = T)
+
 ```
 
 
