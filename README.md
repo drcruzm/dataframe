@@ -1,3 +1,5 @@
+    Rmd tipo ioslides
+    
     ---
     title: "clima"
     author: "Dr Victor"
@@ -6,6 +8,7 @@
     runtime: shiny
     ---
     
+    Seleccion del directorio
     
     ```{r setup, include=FALSE}
     knitr::opts_chunk$set(echo = TRUE)
